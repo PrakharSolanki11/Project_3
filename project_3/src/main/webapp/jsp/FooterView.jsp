@@ -10,17 +10,20 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	height:50px;
 	color: white;
-	text-align: center;
-	background-color: red;
+	display:flex;
+	justify-content:center;
+	
+	background-color: #2E4E4D;
 }
 </style>
 </head>
 <body>
 	<div class="footer ">
 		<center>
-			<font color="black">
-				<h5>&copy; RAYS Technologies</h5>
+			<font color="white">
+				<h5 style="margin-top:14px;">&copy; RAYS Technologies</h5>
 			</font>
 		</center>
 	</div>

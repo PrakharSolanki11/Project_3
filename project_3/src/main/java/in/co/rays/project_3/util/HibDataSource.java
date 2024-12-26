@@ -12,9 +12,10 @@ import org.hibernate.cfg.Configuration;
  *
  */
 public class HibDataSource {
+
 	private static SessionFactory sessionFactory = null;
 
-	public static SessionFactory getSessionFactory() {
+	public static SessionFactory getSessionFactory(){
 
 		if (sessionFactory == null) {
 			sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -30,7 +31,7 @@ public class HibDataSource {
 	}
 
 	public static void closeSession(Session session) {
-		
+
 		if (session != null) {
 			session.close();
 		}

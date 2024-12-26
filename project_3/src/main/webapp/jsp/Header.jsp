@@ -15,8 +15,6 @@
 	href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
 	integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
 	crossorigin="anonymous">
----
-
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script
@@ -28,7 +26,7 @@
 
 <style type="text/css">
 .prakhar {
-	background-image: linear-gradient(270deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+	background-image: linear-gradient(220deg, #0d0a0b 0%, #009fc2 120%);
 }
 </style>
 </head>
@@ -69,7 +67,7 @@
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Marksheet</font>
+					aria-expanded="false"> <font style="color: White;">Marksheet</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item"
@@ -80,7 +78,7 @@
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">User</font>
+					aria-expanded="false"> <font style="color: White;">User</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item"
@@ -95,7 +93,7 @@
 				<li class="nav-item dropdown" style="padding-left: 5px;"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Employee</font>
+					aria-expanded="false"> <font style="color: White;">Employee</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.Employee_CTL%>"> <i
@@ -108,19 +106,19 @@
 				<li class="nav-item dropdown" style="padding-left: 5px;"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">User</font>
+					aria-expanded="false"> <font style="color: White;">User</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="<%=ORSView.USER_CTL%>"> <i
-							class="fas fa-user-circle"></i>Add User
-						</a> <a class="dropdown-item" href="<%=ORSView.USER_LIST_CTL%>"><i
+						<a class="dropdown-item" href="<%=ORSView.USER_CTL%>"><i
+							class="fas fa-user-circle"></i>Add User </a> <a class="dropdown-item"
+							href="<%=ORSView.USER_LIST_CTL%>"><i
 							class="fas fa-user-friends"></i>User List</a>
 					</div></li>
 
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Marksheet
+					aria-expanded="false"> <font style="color: White;">Marksheet
 					</font></a>
 
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -140,7 +138,7 @@
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Role</font>
+					aria-expanded="false"> <font style="color: White;">Role</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.ROLE_CTL%>"> <i
@@ -151,7 +149,7 @@
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">College</font>
+					aria-expanded="false"> <font style="color: White;">College</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.COLLEGE_CTL%>"><i
@@ -162,7 +160,7 @@
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Course
+					aria-expanded="false"> <font style="color: White;">Course
 					</font></a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.COURSE_CTL%>"><i
@@ -173,7 +171,7 @@
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Student</font>
+					aria-expanded="false"> <font style="color: White;">Student</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.STUDENT_CTL%>"><i
@@ -184,7 +182,7 @@
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Faculty
+					aria-expanded="false"> <font style="color: White;">Faculty
 					</font></a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.FACULTY_CTL%>"><i
@@ -196,7 +194,7 @@
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Time
+					aria-expanded="false"> <font style="color: White;">Time
 							Table</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -208,7 +206,7 @@
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: Black;">Subject</font>
+					aria-expanded="false"> <font style="color: White;">Subject</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.SUBJECT_CTL%>"><i
@@ -228,7 +226,7 @@
 					style="padding-left: 5px; padding-right: 67px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"><font style="color: Black;"><%=welcomeMsg%>
+					aria-expanded="false"><font style="color: White;"><%=welcomeMsg%>
 					</font></a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<%

@@ -4,38 +4,36 @@
 <meta charset="ISO-8859-1">
 <title>Welcome Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
 <style>
-body{
-
-background-image: url('<%=ORSView.APP_CONTEXT%>/img/jeshoots.jpg');
+body {
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/jeshoots.jpg');
 	background-size: cover;
 	background-repeat: no repeat;
-
-
 }
-.text-cs1{
-/* font family is is used for change the font  */
-  
-  font-family: Lucida Calligraphy; 
 
- /*  font-family: Monotype Corsiva;
-  
- font-family: Footlight MT Light; */
-  } 
+
+.text-cs1 {
+	/* font-family: Lucida Calligraphy; */
+	font-family: Monotype Corsiva;
+}
 </style>
 
 </head>
 <body class="img-fluid">
-<div class="header" >
-<%@include file="Header.jsp" %>
-</div>
-<div class="text-cs1">
-<center><h1 style="padding-top: 15%; color:red; font-size: 50px;"><b>Welcome To Online Result System</b></h1></center>
-</div>
-<div class="footer">
-<%@include file="FooterView.jsp" %>
-</div>
+
+	<%@include file="Header.jsp"%>
+
+	<div class="text-cs1" style="text-align: center;">
+
+		<h1 style="padding-top: 15%; color: red; font-size: 50px;">
+			<b>Welcome To Online Result System</b>
+		</h1>
+
+	</div>
+
+	<%@include file="FooterView.jsp"%>
+
 </body>
 
 </html>

@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
  */
 public final class ModelFactory {
 
-	private static ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.project_3.bundle.system");
+	private static ResourceBundle rb = ResourceBundle.getBundle("in/co/rays/project_3/bundle/system");
 	private static final String DATABASE = rb.getString("DATABASE");
 
 	private static ModelFactory mFactory = null;

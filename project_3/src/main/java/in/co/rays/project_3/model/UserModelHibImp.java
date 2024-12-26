@@ -341,7 +341,6 @@ public class UserModelHibImp implements UserModelInt {
 		}
 		return dto;
 	}
-
 	/**
 	 * Get User Roles
 	 * 

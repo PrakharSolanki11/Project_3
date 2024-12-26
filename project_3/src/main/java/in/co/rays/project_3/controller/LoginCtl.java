@@ -116,6 +116,7 @@ public class LoginCtl extends BaseCtl {
 		HttpSession session = request.getSession(true);
 		
 		UserModelInt userModel = ModelFactory.getInstance().getUserModel();
+		/* UserModelInt userModel = new UserModelHibImp(); */
 		RoleModelInt model1 = ModelFactory.getInstance().getRoleModel();
 		
 		//long id = DataUtility.getLong(request.getParameter("id"));
@@ -124,6 +125,7 @@ public class LoginCtl extends BaseCtl {
 			UserDTO dto = (UserDTO) populateDTO(request);
 			try {
 				dto = userModel.authenticate(dto.getLogin(), dto.getPassword());
+				
 				if (dto != null) {
 					session.setAttribute("user", dto);
 					long roleId = dto.getRoleId();
@@ -147,6 +149,7 @@ public class LoginCtl extends BaseCtl {
 					}
 
 				} else {
+					System.out.println("In else ....");
 					dto = (UserDTO) populateDTO(request);
 					ServletUtility.setDto(dto, request);
 					ServletUtility.setErrorMessage("Invalid LoginId And Password", request);
