@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-Mar-2025, 6:28:03 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.CartOverViewDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="CartOverViewDTO" lazy="false">
+        <property name="customerName" type="java.lang.String">
+            <column name="CUSTOMERNAME" />
+        </property>
+        <property name="product" type="java.lang.String">
+            <column name="PRODUCT" />
+        </property>
+        <property name="quantityOrdered" type="int">
+            <column name="QUANTITYORDERED" />
+        </property>
+        <property name="transactionDate" type="java.util.Date">
+            <column name="TRANSACTIONDATE" />
+        </property>
+    </subclass>
+</hibernate-mapping>

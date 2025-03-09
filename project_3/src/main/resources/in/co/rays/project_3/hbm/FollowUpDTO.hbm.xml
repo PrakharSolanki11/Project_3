@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-Mar-2025, 1:34:23 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="in.co.rays.project_3.dto">
+	<class name="FollowUpDTO" table="ST_FOLLOW">
+		<id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="client" type="java.lang.String">
+            <column name="CLIENT" />
+        </property>
+        <property name="charges" type="double">
+            <column name="CHARGES" />
+        </property>
+        <property name="physician" type="java.lang.String">
+            <column name="PHYSICIAN" />
+        </property>
+        <property name="appointmentDate" type="java.util.Date">
+            <column name="APPOINTMENTDATE" />
+        </property>
+    </class>
+</hibernate-mapping>
