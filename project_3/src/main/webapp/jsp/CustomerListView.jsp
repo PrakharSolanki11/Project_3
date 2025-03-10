@@ -70,7 +70,7 @@
 			%>
 			<center>
 				<h1 class="text-white font-weight-bold pt-3">
-					<b>Customer List 7</b>
+					<b>Customer List </b>
 				</h1>
 			</center>
 			<br>
