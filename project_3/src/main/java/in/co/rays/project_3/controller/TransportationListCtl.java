@@ -53,11 +53,11 @@ public class TransportationListCtl extends BaseCtl {
 		}
 
 
-		Map<Integer, String> map = new HashMap();
+		HashMap<Integer, String> map = new HashMap();
 
-		map.put(1, "ByRoad");
-		map.put(2, "RailWay");
-		map.put(3, "AirWay");
+		map.put(1, "Air");
+		map.put(2, "Rail");
+		map.put(3, "Road");
 
 		request.setAttribute("mode", map);
 

@@ -91,7 +91,20 @@
 					} else if (userDto.getRoleId() == RoleDTO.ADMIN || userDto.getRoleId() == RoleDTO.COLLEGE_SCHOOL) {
 				%>
 				
-					<li class="nav-item dropdown" style="padding-left: 5px"><a
+				
+				<li class="nav-item dropdown" style="padding-left: 5px;"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: White;">Customer</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.CUSTOMER_CTL%>"><i
+							class="fas fa-user-circle"></i>Add Customer </a> <a
+							class="dropdown-item" href="<%=ORSView.CUSTOMER_LIST_CTL%>"><i
+							class="fas fa-user-friends"></i>Customer List</a>
+					</div></li>
+				
+				<%-- <li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: White;">Transportation</font>
@@ -185,18 +198,8 @@
 							class="dropdown-item" href="<%=ORSView.PURCHASE_LIST_CTL%>"><i
 							class="fas fa-user-friends"></i>PurchaseOrder List</a>
 					</div></li>
-
-				<li class="nav-item dropdown" style="padding-left: 5px;"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: White;">Customer</font>
-				</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="<%=ORSView.CUSTOMER_CTL%>"><i
-							class="fas fa-user-circle"></i>Add Customer </a> <a
-							class="dropdown-item" href="<%=ORSView.CUSTOMER_LIST_CTL%>"><i
-							class="fas fa-user-friends"></i>Customer List</a>
-					</div></li>
+ --%>
+				
 
 				<li class="nav-item dropdown" style="padding-left: 5px;"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"

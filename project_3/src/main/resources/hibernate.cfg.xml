@@ -49,19 +49,8 @@
 
 		<mapping resource="in/co/rays/project_3/hbm/SubjectDTO.hbm.xml"></mapping>
 		
-		<mapping resource="in/co/rays/project_3/hbm/CustomerDTO.hbm.xml"></mapping>
 		
-		<mapping resource="in/co/rays/project_3/hbm/PurchaseDTO.hbm.xml"></mapping>
-		
-		<mapping resource="in/co/rays/project_3/hbm/CartDTO.hbm.xml"></mapping>
-		
-		<mapping resource="in/co/rays/project_3/hbm/StaffMemberDTO.hbm.xml"></mapping>
-		
-		<mapping resource="in/co/rays/project_3/hbm/InventoryDTO.hbm.xml"></mapping>
-		
-		<mapping resource="in/co/rays/project_3/hbm/FollowUpDTO.hbm.xml"></mapping>
-		
-		<mapping resource="in/co/rays/project_3/hbm/TransportationDTO.hbm.xml"></mapping>
+		<mapping resource="in/co/rays/project_3/hbm/CustomerDTO.hbm.xml"></mapping> 
 		
 		
 		

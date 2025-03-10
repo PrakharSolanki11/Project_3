@@ -56,6 +56,25 @@ public final class ModelFactory {
 		return userModel;
 	}
 	
+	public CustomerModelInt getCustomerModel() {
+
+		CustomerModelInt customerModel = (CustomerModelInt) modelCache.get("customerModel");
+
+		if (customerModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				customerModel = new CustomerModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+//				customerModel = new CustomerModelJDBCImpl();
+				customerModel = new CustomerModelHibImpl();
+			}
+
+		}
+
+		return customerModel;
+	}
+	
 	public TransportationModelInt getTransportationModel() {
 		TransportationModelInt transportationModel = (TransportationModelInt) modelCache.get("transportationModel");
 		if (transportationModel == null) {
@@ -148,24 +167,7 @@ public final class ModelFactory {
 		return purchaseModel;
 	}
 	
-	public CustomerModelInt getCustomerModel() {
-
-		CustomerModelInt customerModel = (CustomerModelInt) modelCache.get("customerModel");
-
-		if (customerModel == null) {
-
-			if ("Hibernate".equals(DATABASE)) {
-				customerModel = new CustomerModelHibImpl();
-			}
-			if ("JDBC".equals(DATABASE)) {
-//				customerModel = new CustomerModelJDBCImpl();
-				customerModel = new CustomerModelHibImpl();
-			}
-
-		}
-
-		return customerModel;
-	}
+	
 
 	public MarksheetModelInt getMarksheetModel() {
 		MarksheetModelInt marksheetModel = (MarksheetModelInt) modelCache.get("marksheetModel");

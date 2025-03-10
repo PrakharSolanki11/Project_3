@@ -41,11 +41,11 @@ public class TransportationCtl extends BaseCtl {
 	@Override
 	protected void preload(HttpServletRequest request) {
 
-		Map<String, String> map = new HashMap<String, String>();
-		
-		map.put("ByRoad", "ByRoad");
-		map.put("RailWay", "RailWay");
-		map.put("AirWay", "AirWay");
+		Map<Integer, String> map = new HashMap();
+
+		map.put(1, "Air");
+		map.put(2, "Rail");
+		map.put(3, "Road");
 
 		request.setAttribute("Mode", map);
 
