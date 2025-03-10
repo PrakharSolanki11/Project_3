@@ -223,7 +223,8 @@ public class CustomerListCtl extends BaseCtl {
 			ServletUtility.handleException(e, request, response);
 			return;
 		} catch (Exception e) {
-// TODO Auto-generated catch block
+
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		log.debug("CustomerListCtl doGet End");
