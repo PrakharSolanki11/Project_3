@@ -17,6 +17,7 @@
 <script src="<%=ORSView.APP_CONTEXT%>/js/Validate.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
+
 i.css {
 	border: 2px solid #8080803b;
 	padding-left: 10px;
@@ -37,6 +38,7 @@ i.css {
 	background-size: cover;
 	padding-top: 6%;
 }
+
 </style>
 
 </head>
