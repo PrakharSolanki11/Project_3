@@ -39,11 +39,12 @@ public class CustomerDTO extends BaseDTO{
 		this.importance = importance;
 	} 
 	
-    @Override
-    public String toString() {
+   
+	@Override
+        public String toString() {
     	// TODO Auto-generated method stub
     	return "Customer {id== "+id+" clientName = "+clientName+ "location== "+location + "contactNumber =="+ contactNumber +" importance = "+ importance+ "}";
-    }
+        }
 
 	@Override
 	public String getValue() {
