@@ -61,6 +61,8 @@
 		
 		<mapping resource="in/co/rays/project_3/hbm/FollowUpDTO.hbm.xml"></mapping>
 		
+		<mapping resource="in/co/rays/project_3/hbm/TransportationDTO.hbm.xml"></mapping>
+		
 		
 		
 	</session-factory>

@@ -56,6 +56,19 @@ public final class ModelFactory {
 		return userModel;
 	}
 	
+	public TransportationModelInt getTransportationModel() {
+		TransportationModelInt transportationModel = (TransportationModelInt) modelCache.get("transportationModel");
+		if (transportationModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				transportationModel = new TransportationModelHibImpl();
+			}
+			
+			modelCache.put("transportationModel", transportationModel);
+		}
+
+		return transportationModel;
+	}
+	
 	public FollowUpModelInt getFollowUpModel() {
 		FollowUpModelInt FollowUpModel = (FollowUpModelInt) modelCache.get("FollowUpModel");
 		if (FollowUpModel == null) {

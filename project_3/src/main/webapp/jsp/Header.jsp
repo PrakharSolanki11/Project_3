@@ -91,6 +91,23 @@
 					} else if (userDto.getRoleId() == RoleDTO.ADMIN || userDto.getRoleId() == RoleDTO.COLLEGE_SCHOOL) {
 				%>
 				
+					<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: White;">Transportation</font>
+
+				</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.TRANSPORTATION_CTL%>"><i
+							class="fas fa-calculator"></i>Add Transportation</a> <a
+							class="dropdown-item" href="<%=ORSView.TRANSPORTATION_LIST_CTL%>">
+							<i class="fas fa-sort-amount-down"></i>Transportation List
+
+						</a>
+					</div></li>
+				
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"

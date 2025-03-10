@@ -1,6 +1,6 @@
 package in.co.rays.project_3.model;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -9,15 +9,15 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
-import in.co.rays.project_3.dto.CustomerDTO;
+import in.co.rays.project_3.dto.TransportationDTO;
 import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
 import in.co.rays.project_3.util.HibDataSource;
 
-public class CustomerModelHibImpl implements CustomerModelInt {
+public class TransportationModelHibImpl implements TransportationModelInt {
 
 	@Override
-	public long add(CustomerDTO dto) throws ApplicationException, DuplicateRecordException {
+	public long add(TransportationDTO dto) throws ApplicationException, DuplicateRecordException {
 		Session session = HibDataSource.getSession();
 		Transaction tx = null;
 		long id;
@@ -33,7 +33,7 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 				tx.rollback();
 
 			}
-			throw new ApplicationException("Exception in Customer Add " + e.getMessage());
+			throw new ApplicationException("Exception in Transportation Add " + e.getMessage());
 		} finally {
 			session.close();
 		}
@@ -44,7 +44,7 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 	}
 
 	@Override
-	public void update(CustomerDTO dto) throws ApplicationException, DuplicateRecordException {
+	public void update(TransportationDTO dto) throws ApplicationException, DuplicateRecordException {
 		Session session = HibDataSource.getSession();
 		Transaction tx = null;
 
@@ -56,7 +56,7 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 			if (tx != null) {
 				tx.rollback();
 			}
-			throw new ApplicationException("Exception in Customer update" + e.getMessage());
+			throw new ApplicationException("Exception in Transportation update" + e.getMessage());
 		} finally {
 			session.close();
 		}
@@ -64,7 +64,7 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 	}
 
 	@Override
-	public void delete(CustomerDTO dto) throws ApplicationException {
+	public void delete(TransportationDTO dto) throws ApplicationException {
 		Session session = HibDataSource.getSession();
 		Transaction tx = null;
 		try {
@@ -75,7 +75,7 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 			if (tx != null) {
 				tx.rollback();
 			}
-			throw new ApplicationException("Exception in Customer Delete" + e.getMessage());
+			throw new ApplicationException("Exception in Transportation Delete" + e.getMessage());
 		} finally {
 			session.close();
 		}
@@ -83,14 +83,14 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 	}
 
 	@Override
-	public CustomerDTO findByPK(long pk) throws ApplicationException {
+	public TransportationDTO findByPK(long pk) throws ApplicationException {
 		// TODO Auto-generated method stub
 		Session session = HibDataSource.getSession();
-		CustomerDTO dto = null;
+		TransportationDTO dto = null;
 		try {
-			dto = (CustomerDTO) session.get(CustomerDTO.class, pk);
+			dto = (TransportationDTO) session.get(TransportationDTO.class, pk);
 		} catch (HibernateException e) {
-			throw new ApplicationException("Exception : Exception in getting Customer by pk");
+			throw new ApplicationException("Exception : Exception in getting Transportation by pk");
 		} finally {
 			session.close();
 		}
@@ -111,7 +111,7 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 		List list = null;
 		try {
 
-			Criteria criteria = session.createCriteria(CustomerDTO.class);
+			Criteria criteria = session.createCriteria(TransportationDTO.class);
 			if (pageSize > 0) {
 				pageNo = (pageNo - 1) * pageSize;
 				criteria.setFirstResult(pageNo);
@@ -121,7 +121,7 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 			list = criteria.list();
 
 		} catch (HibernateException e) {
-			throw new ApplicationException("Exception : Exception in  Customers list");
+			throw new ApplicationException("Exception : Exception in  Transportations list");
 		} finally {
 			session.close();
 		}
@@ -131,36 +131,35 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 	}
 
 	@Override
-	public List search(CustomerDTO dto) throws ApplicationException {
+	public List search(TransportationDTO dto) throws ApplicationException {
 		// TODO Auto-generated method stub
 		return search(dto, 0, 0);
 	}
 
 	@Override
-	public List search(CustomerDTO dto, int pageNo, int pageSize) throws ApplicationException {
+	public List search(TransportationDTO dto, int pageNo, int pageSize) throws ApplicationException {
 		// TODO Auto-generated method stub
 		Session session = null;
-		ArrayList<CustomerDTO> list= null;
+		ArrayList<TransportationDTO> list = null;
 		try {
 			session = HibDataSource.getSession();
-			Criteria criteria = session.createCriteria(CustomerDTO.class);
+			Criteria criteria = session.createCriteria(TransportationDTO.class);
 			if (dto != null) {
 
-				System.out.println("11111111111111111111111111111111111111111111111111111111111");
 				if (dto.getId() != null) {
 					criteria.add(Restrictions.eq("id", dto.getId()));
 				}
-				if (dto.getClientName() != null && dto.getClientName().length() > 0) {
-					criteria.add(Restrictions.like("clientName", dto.getClientName() + "%"));
+				if (dto.getDescription() != null && dto.getDescription().length() > 0) {
+					criteria.add(Restrictions.like("description", dto.getDescription() + "%"));
 				}
-				if (dto.getLocation() != null && dto.getLocation().length() > 0) {
-					criteria.add(Restrictions.like("location", dto.getLocation() + "%"));
+				if (dto.getDate() != null && dto.getDate().getTime() > 0) {
+					criteria.add(Restrictions.eq("date", dto.getDate()));
 				}
-				if (dto.getContactNumber() > 0) {
-					criteria.add(Restrictions.eq("contactNumber", dto.getContactNumber()));
+				if (dto.getCost() > 0) {
+					criteria.add(Restrictions.eq("cost", dto.getCost()));
 				}
-				if (dto.getImportance() > 0) {
-					criteria.add(Restrictions.eq("importance", dto.getImportance()));
+				if (dto.getMode() > 0) {
+					criteria.add(Restrictions.eq("mode", dto.getMode()));
 				}
 
 			}
@@ -170,9 +169,9 @@ public class CustomerModelHibImpl implements CustomerModelInt {
 				criteria.setFirstResult(pageNo);
 				criteria.setMaxResults(pageSize);
 			}
-			list = (ArrayList<CustomerDTO>) criteria.list();
+			list = (ArrayList<TransportationDTO>) criteria.list();
 		} catch (HibernateException e) {
-			throw new ApplicationException("Exception in customer search");
+			throw new ApplicationException("Exception in transportation search");
 		} finally {
 			session.close();
 		}

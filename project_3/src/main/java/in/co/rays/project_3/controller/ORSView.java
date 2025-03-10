@@ -17,8 +17,6 @@ public interface ORSView {
 	public String VECHICLE_VIEW = PAGE_FOLDER + "/VechicleView.jsp";
 	public String VECHICLE_LIST_VIEW = PAGE_FOLDER + "/VechicleListView.jsp";
 
-	public String TRANSPORTATION_VIEW = PAGE_FOLDER + "/TransportationView.jsp";
-	public String TRANSPORTATION_LIST_VIEW = PAGE_FOLDER + "/TransportationListView.jsp";
 
 	public String BANK_VIEW = PAGE_FOLDER + "/BankView.jsp";
 	public String BANK_LIST_VIEW = PAGE_FOLDER + "/BankListView.jsp";
@@ -135,5 +133,12 @@ public interface ORSView {
 	public String FOLLOWUP_LIST_VIEW = PAGE_FOLDER + "/FollowUpListView.jsp";
 	public String FOLLOWUP_CTL = APP_CONTEXT + "/ctl/FollowUpCtl";
 	public String FOLLOWUP_LIST_CTL = APP_CONTEXT + "/ctl/FollowUpListCtl";
+	
+	// -------------------------------------------------------------------------------Transportation
+
+	public String TRANSPORTATION_VIEW = PAGE_FOLDER + "/TransportationView.jsp";
+	public String TRANSPORTATION_LIST_VIEW = PAGE_FOLDER + "/TransportationListView.jsp";
+	public String TRANSPORTATION_CTL = APP_CONTEXT + "/ctl/TransportationCtl";
+	public String TRANSPORTATION_LIST_CTL = APP_CONTEXT + "/ctl/TransportationListCtl";
 
 }
