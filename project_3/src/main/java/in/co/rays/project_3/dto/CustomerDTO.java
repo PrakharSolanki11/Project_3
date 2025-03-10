@@ -2,6 +2,7 @@ package in.co.rays.project_3.dto;
 
 public class CustomerDTO extends BaseDTO{
 
+	
 	private String clientName;
 	private String location;
 	private long contactNumber;
